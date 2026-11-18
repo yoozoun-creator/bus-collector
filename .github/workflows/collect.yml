@@ -30,7 +30,7 @@ jobs:
       - name: Collect
         env:
           BUS_API_KEY: ${{ secrets.BUS_API_KEY }}
-        run: python collect.py
+        run: python -u collect.py
 
       - name: Commit data
         if: always()

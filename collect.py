@@ -95,7 +95,7 @@ else:
         time.sleep(wait)
 
     os.makedirs("data", exist_ok=True)
-    filename = "data/" + start.strftime("%Y-%m-%d_%H%M") + ".csv"
+    filename = "data/" + start.strftime("%Y-%m-%d_%H%M") + "_" + datetime.now(KST).strftime("%H%M%S") + ".csv"
 
     while datetime.now(KST) < end:
         collect_once(filename)
